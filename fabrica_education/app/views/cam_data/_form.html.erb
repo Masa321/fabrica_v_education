@@ -1,0 +1,33 @@
+<%= form_for(@cam_datum) do |f| %>
+  <% if @cam_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cam_datum.errors.count, "error") %> prohibited this cam_datum from being saved:</h2>
+
+      <ul>
+      <% @cam_datum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :datum_id %><br>
+    <%= f.text_field :datum_id %>
+  </div>
+  <div class="field">
+    <%= f.label :path_data %><br>
+    <%= f.text_field :path_data %>
+  </div>
+  <div class="field">
+    <%= f.label :slicer_id %><br>
+    <%= f.text_field :slicer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :print_time %><br>
+    <%= f.datetime_select :print_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

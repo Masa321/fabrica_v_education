@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :cam_data
+
   resources :printers
 
   resources :jobs

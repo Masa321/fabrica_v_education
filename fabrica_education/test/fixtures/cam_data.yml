@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  datum_id: 
+  path_data: MyString
+  slicer_id: 
+  print_time: 2015-02-15 06:29:05
+
+two:
+  datum_id: 
+  path_data: MyString
+  slicer_id: 
+  print_time: 2015-02-15 06:29:05

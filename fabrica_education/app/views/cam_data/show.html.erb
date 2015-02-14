@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Datum:</strong>
+  <%= @cam_datum.datum_id %>
+</p>
+
+<p>
+  <strong>Path data:</strong>
+  <%= @cam_datum.path_data %>
+</p>
+
+<p>
+  <strong>Slicer:</strong>
+  <%= @cam_datum.slicer_id %>
+</p>
+
+<p>
+  <strong>Print time:</strong>
+  <%= @cam_datum.print_time %>
+</p>
+
+<%= link_to 'Edit', edit_cam_datum_path(@cam_datum) %> |
+<%= link_to 'Back', cam_data_path %>

@@ -1,0 +1,61 @@
+<%= form_for(@printer) do |f| %>
+  <% if @printer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@printer.errors.count, "error") %> prohibited this printer from being saved:</h2>
+
+      <ul>
+      <% @printer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :condition %><br>
+    <%= f.text_field :condition %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :print_area_x %><br>
+    <%= f.text_field :print_area_x %>
+  </div>
+  <div class="field">
+    <%= f.label :print_area_y %><br>
+    <%= f.text_field :print_area_y %>
+  </div>
+  <div class="field">
+    <%= f.label :print_area_z %><br>
+    <%= f.text_field :print_area_z %>
+  </div>
+  <div class="field">
+    <%= f.label :printer_type %><br>
+    <%= f.text_field :printer_type %>
+  </div>
+  <div class="field">
+    <%= f.label :slice_h %><br>
+    <%= f.text_field :slice_h %>
+  </div>
+  <div class="field">
+    <%= f.label :slice_m %><br>
+    <%= f.text_field :slice_m %>
+  </div>
+  <div class="field">
+    <%= f.label :slice_l %><br>
+    <%= f.text_field :slice_l %>
+  </div>
+  <div class="field">
+    <%= f.label :photo %><br>
+    <%= f.text_field :photo %>
+  </div>
+  <div class="field">
+    <%= f.label :filament_color %><br>
+    <%= f.text_field :filament_color %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

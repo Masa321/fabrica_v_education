@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Condition:</strong>
+  <%= @printer.condition %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @printer.name %>
+</p>
+
+<p>
+  <strong>Print area x:</strong>
+  <%= @printer.print_area_x %>
+</p>
+
+<p>
+  <strong>Print area y:</strong>
+  <%= @printer.print_area_y %>
+</p>
+
+<p>
+  <strong>Print area z:</strong>
+  <%= @printer.print_area_z %>
+</p>
+
+<p>
+  <strong>Printer type:</strong>
+  <%= @printer.printer_type %>
+</p>
+
+<p>
+  <strong>Slice h:</strong>
+  <%= @printer.slice_h %>
+</p>
+
+<p>
+  <strong>Slice m:</strong>
+  <%= @printer.slice_m %>
+</p>
+
+<p>
+  <strong>Slice l:</strong>
+  <%= @printer.slice_l %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @printer.photo %>
+</p>
+
+<p>
+  <strong>Filament color:</strong>
+  <%= @printer.filament_color %>
+</p>
+
+<%= link_to 'Edit', edit_printer_path(@printer) %> |
+<%= link_to 'Back', printers_path %>

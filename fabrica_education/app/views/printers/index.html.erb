@@ -1,0 +1,45 @@
+<h1>Listing printers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Condition</th>
+      <th>Name</th>
+      <th>Print area x</th>
+      <th>Print area y</th>
+      <th>Print area z</th>
+      <th>Printer type</th>
+      <th>Slice h</th>
+      <th>Slice m</th>
+      <th>Slice l</th>
+      <th>Photo</th>
+      <th>Filament color</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @printers.each do |printer| %>
+      <tr>
+        <td><%= printer.condition %></td>
+        <td><%= printer.name %></td>
+        <td><%= printer.print_area_x %></td>
+        <td><%= printer.print_area_y %></td>
+        <td><%= printer.print_area_z %></td>
+        <td><%= printer.printer_type %></td>
+        <td><%= printer.slice_h %></td>
+        <td><%= printer.slice_m %></td>
+        <td><%= printer.slice_l %></td>
+        <td><%= printer.photo %></td>
+        <td><%= printer.filament_color %></td>
+        <td><%= link_to 'Show', printer %></td>
+        <td><%= link_to 'Edit', edit_printer_path(printer) %></td>
+        <td><%= link_to 'Destroy', printer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Printer', new_printer_path %>

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  condition: 
+  name: MyString
+  print_area_x: 1.5
+  print_area_y: 1.5
+  print_area_z: 1.5
+  printer_type: MyString
+  slice_h: 
+  slice_m: 
+  slice_l: 
+  photo: 
+  filament_color: MyString
+
+two:
+  condition: 
+  name: MyString
+  print_area_x: 1.5
+  print_area_y: 1.5
+  print_area_z: 1.5
+  printer_type: MyString
+  slice_h: 
+  slice_m: 
+  slice_l: 
+  photo: 
+  filament_color: MyString

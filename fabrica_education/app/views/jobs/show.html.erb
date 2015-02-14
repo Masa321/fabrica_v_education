@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @job.user_id %>
+</p>
+
+<p>
+  <strong>Datum:</strong>
+  <%= @job.datum_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @job.status %>
+</p>
+
+<p>
+  <strong>Print time:</strong>
+  <%= @job.print_time %>
+</p>
+
+<p>
+  <strong>Rate:</strong>
+  <%= @job.rate %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @job.photo %>
+</p>
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>

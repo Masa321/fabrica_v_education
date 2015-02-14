@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  datum_id: 
+  status: 
+  print_time: 2015-02-15 01:35:59
+  rate: 
+  photo: 
+
+two:
+  user_id: 
+  datum_id: 
+  status: 
+  print_time: 2015-02-15 01:35:59
+  rate: 
+  photo: 

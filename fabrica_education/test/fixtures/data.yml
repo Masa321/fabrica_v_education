@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  slice_id: 
+  user_id: 
+  name: MyString
+  origin: 
+  slice: MyString
+  print_time: 2015-02-15 01:35:05
+  delete_f: false
+
+two:
+  slice_id: 
+  user_id: 
+  name: MyString
+  origin: 
+  slice: MyString
+  print_time: 2015-02-15 01:35:05
+  delete_f: false

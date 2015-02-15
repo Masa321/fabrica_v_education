@@ -1,0 +1,23 @@
+<h1>Listing slicer_configs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @slicer_configs.each do |slicer_config| %>
+      <tr>
+        <td><%= link_to 'Show', slicer_config %></td>
+        <td><%= link_to 'Edit', edit_slicer_config_path(slicer_config) %></td>
+        <td><%= link_to 'Destroy', slicer_config, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Slicer config', new_slicer_config_path %>

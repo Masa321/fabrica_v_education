@@ -1,10 +1,10 @@
 class CreateData < ActiveRecord::Migration
   def change
     create_table :data do |t|
-      t.int :slice_id
-      t.int :user_id
+      t.integer :slice_id
+      t.integer :user_id
       t.string :name
-      t.bin :origin
+      t.binary :origin
       t.string :slice
       t.timestamp :print_time
       t.boolean :delete_f

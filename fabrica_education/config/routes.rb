@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :slicer_configs
+
+  devise_for :users
   get 'home/index'
 
   get 'home/show'

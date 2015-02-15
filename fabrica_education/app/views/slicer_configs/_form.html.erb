@@ -1,0 +1,17 @@
+<%= form_for(@slicer_config) do |f| %>
+  <% if @slicer_config.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@slicer_config.errors.count, "error") %> prohibited this slicer_config from being saved:</h2>
+
+      <ul>
+      <% @slicer_config.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

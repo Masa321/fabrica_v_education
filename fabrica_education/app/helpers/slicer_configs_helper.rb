@@ -1,0 +1,2 @@
+module SlicerConfigsHelper
+end

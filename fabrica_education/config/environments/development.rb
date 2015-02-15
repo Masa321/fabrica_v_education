@@ -14,7 +14,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -35,5 +35,36 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
   # devise設定
-  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => "localhost", :port => 3000 }
+  #追加分
+  config.middleware.delete Rack::Lock  
+
+  # config.action_controller.asset_host = 'http://localhost:3000'
+  # config.action_mailer.asset_host = config.action_controller.asset_host
+  # config.action_mailer.default_url_options= { host:'localhost:3000' }
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.default_url_options = { host: 'microfab.asia' }
+  # config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.smtp_settings = {
+  #   :address              => "email-smtp.us-west-2.amazonaws.com",
+  #   :port                 => 465,
+  #   :domain               => 'microfab.asia',
+  #   :user_name            => 'AKIAJKFFHJ6R5SHNSH7Q',
+  #   :password             => 'ArdNXQWcy9IQ+I97bnDbGQO4PAH+SmuffIqjsssQnmIj',
+  #   :authentication       => :login,
+  #   :enable_starttls_auto => true
+  # }
+
+  #gmailでのテスト送信用
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address => 'smtp.gmail.com',
+    :port => '587',
+    :domain => 'smtp.gmail.com',
+    :authentication => 'plain',
+    :user_name => 'mitsuimasayoshi@gmail.com',
+    :password => 'mitsui1129'
+  }
 end

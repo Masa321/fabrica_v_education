@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150215042107) do
+ActiveRecord::Schema.define(version: 20150215085236) do
 
   create_table "cam_data", force: true do |t|
     t.integer  "datum_id"
@@ -50,9 +50,9 @@ ActiveRecord::Schema.define(version: 20150215042107) do
     t.float    "print_area_y"
     t.float    "print_area_z"
     t.string   "printer_type"
-    t.integer  "slice_h"
-    t.integer  "slice_m"
-    t.integer  "slice_l"
+    t.integer  "slice_h_id"
+    t.integer  "slice_m_id"
+    t.integer  "slice_l_id"
     t.binary   "photo"
     t.string   "filament_color"
     t.datetime "created_at"

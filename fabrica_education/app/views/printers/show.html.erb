@@ -1,36 +1,37 @@
 <p id="notice"><%= notice %></p>
 
+<h1>確認用に表示する？</h1>
 <p>
-  <strong>Condition:</strong>
+  <strong>利用状況:</strong>
   <%= @printer.condition %>
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>プリンタの名前:</strong>
   <%= @printer.name %>
 </p>
 
 <p>
-  <strong>Print area x:</strong>
-  <%= @printer.print_area_x %>
-</p>
-
-<p>
-  <strong>Print area y:</strong>
-  <%= @printer.print_area_y %>
-</p>
-
-<p>
-  <strong>Print area z:</strong>
-  <%= @printer.print_area_z %>
-</p>
-
-<p>
-  <strong>Printer type:</strong>
+  <strong>プリンタの機種:</strong>
   <%= @printer.printer_type %>
 </p>
 
 <p>
+  <strong>出力できるX軸の大きさ（mm）:</strong>
+  <%= @printer.print_area_x %>
+</p>
+
+<p>
+  <strong>出力できるY軸の大きさ（mm）:</strong>
+  <%= @printer.print_area_y %>
+</p>
+
+<p>
+  <strong>出力できるZ軸の高さ（mm）:</strong>
+  <%= @printer.print_area_z %>
+</p>
+
+<!-- <p>
   <strong>Slice h:</strong>
   <%= @printer.slice_h %>
 </p>
@@ -43,16 +44,31 @@
 <p>
   <strong>Slice l:</strong>
   <%= @printer.slice_l %>
-</p>
+</p> -->
 
 <p>
-  <strong>Photo:</strong>
+  <strong>プリンタの写真:</strong>
   <%= @printer.photo %>
 </p>
 
 <p>
-  <strong>Filament color:</strong>
+  <strong>フィラメントの種類:</strong>
   <%= @printer.filament_color %>
+</p>
+
+<p>
+  <strong>フィラメントの色:</strong>
+  <%= @printer.filament_color %>
+</p>
+
+<h1>データのアップロード</h1>
+<h2>新規アップロード（Dataのform）</h2>
+
+<h2>アップロード済み</h2>
+
+<p>
+  <strong>データの名前:</strong>
+  <%= @data.name %>
 </p>
 
 <%= link_to 'Edit', edit_printer_path(@printer) %> |

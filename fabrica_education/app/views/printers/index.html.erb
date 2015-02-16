@@ -1,4 +1,4 @@
-<h1>Listing printers</h1>
+<h1>3Dプリンタを選ぶ</h1>
 
 <table>
   <thead>
@@ -9,9 +9,9 @@
       <th>Print area y</th>
       <th>Print area z</th>
       <th>Printer type</th>
-      <th>Slice h</th>
+      <!-- <th>Slice h</th>
       <th>Slice m</th>
-      <th>Slice l</th>
+      <th>Slice l</th> -->
       <th>Photo</th>
       <th>Filament color</th>
       <th colspan="3"></th>
@@ -27,11 +27,9 @@
         <td><%= printer.print_area_y %></td>
         <td><%= printer.print_area_z %></td>
         <td><%= printer.printer_type %></td>
-        <td><%= printer.slice_h %></td>
-        <td><%= printer.slice_m %></td>
-        <td><%= printer.slice_l %></td>
         <td><%= printer.photo %></td>
         <td><%= printer.filament_color %></td>
+        <td><%= link_to 'このプリンタを使用する', printer_data_path(printer) %></td>
         <td><%= link_to 'Show', printer %></td>
         <td><%= link_to 'Edit', edit_printer_path(printer) %></td>
         <td><%= link_to 'Destroy', printer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

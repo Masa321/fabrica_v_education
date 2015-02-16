@@ -10,6 +10,8 @@ class PrintersController < ApplicationController
   # GET /printers/1
   # GET /printers/1.json
   def show
+    @user = current_user
+    @data = @user.data.all
   end
 
   # GET /printers/new
@@ -69,6 +71,6 @@ class PrintersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def printer_params
-      params.require(:printer).permit(:condition, :name, :print_area_x, :print_area_y, :print_area_z, :printer_type, :slice_h, :slice_m, :slice_l, :photo, :filament_color)
+      params.require(:printer).permit(:condition, :name, :print_area_x, :print_area_y, :print_area_z, :printer_type, :slice_h, :slice_m, :slice_l, :photo, :filament_color, :filament_type)
     end
 end

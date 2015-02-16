@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150215085236) do
+ActiveRecord::Schema.define(version: 20150216094331) do
 
   create_table "cam_data", force: true do |t|
     t.integer  "datum_id"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20150215085236) do
     t.datetime "print_time"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
   create_table "data", force: true do |t|

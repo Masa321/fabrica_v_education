@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Datum</th>
+      <th>Name</th>
       <th>Path data</th>
       <th>Slicer</th>
       <th>Print time</th>
@@ -15,6 +16,7 @@
     <% @cam_data.each do |cam_datum| %>
       <tr>
         <td><%= cam_datum.datum_id %></td>
+        <td><%= cam_datum.name %></td>
         <td><%= cam_datum.path_data %></td>
         <td><%= cam_datum.slicer_id %></td>
         <td><%= cam_datum.print_time %></td>

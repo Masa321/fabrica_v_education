@@ -10,6 +10,7 @@ class CamDataController < ApplicationController
   # GET /cam_data/1
   # GET /cam_data/1.json
   def show
+    @data = Datum.find(params[:datum_id])
   end
 
   # GET /cam_data/new
@@ -69,6 +70,6 @@ class CamDataController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cam_datum_params
-      params.require(:cam_datum).permit(:datum_id, :path_data, :slicer_id, :print_time)
+      params.require(:cam_datum).permit(:datum_id, :path_data, :slicer_id, :print_time, :name)
     end
 end

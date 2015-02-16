@@ -1,3 +1,3 @@
 class SlicerConfig < ActiveRecord::Base
-	belongs_to :printer
+	has_many :printer
 end

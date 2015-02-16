@@ -15,6 +15,7 @@ class DataController < ApplicationController
   # GET /data/new
   def new
     @datum = Datum.new
+    @printer = Printer.find(params[:printer_id])
   end
 
   # GET /data/1/edit
@@ -28,7 +29,7 @@ class DataController < ApplicationController
 
     respond_to do |format|
       if @datum.save
-        format.html { redirect_to @datum, notice: 'Datum was successfully created.' }
+        format.html { redirect_to printer_data_path, notice: 'Datum was successfully created.' }
         format.json { render :show, status: :created, location: @datum }
       else
         format.html { render :new }
@@ -69,6 +70,6 @@ class DataController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def datum_params
-      params.require(:datum).permit(:slice_id, :user_id, :name, :origin, :slice, :print_time, :delete_f)
+      params.require(:datum).permit(:user_id, :name, :cad_data, :delete_f)
     end
 end

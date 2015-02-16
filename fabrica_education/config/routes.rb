@@ -3,16 +3,20 @@ Rails.application.routes.draw do
 
   devise_for :users
   get 'home/index'
-
   get 'home/show'
 
-  resources :cam_data
+  # resources :cam_data
 
-  resources :printers
+  resources :printers, shallow: true do
+    resources :data, shallow: true do
+      resources :cam_data
+    end
+    resources :jobs
+  end
 
-  resources :jobs
+  # resources :jobs
 
-  resources :data
+  # resources :data
 
   #for devise
   root to: "home#index"

@@ -1,33 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Slice:</strong>
-  <%= @datum.slice_id %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @datum.user_id %>
-</p>
-
-<p>
   <strong>Name:</strong>
   <%= @datum.name %>
 </p>
 
 <p>
-  <strong>Origin:</strong>
-  <%= @datum.origin %>
-</p>
-
-<p>
-  <strong>Slice:</strong>
-  <%= @datum.slice %>
-</p>
-
-<p>
-  <strong>Print time:</strong>
-  <%= @datum.print_time %>
+  <strong>cad_data:</strong>
+  <%= @datum.cad_data %>
 </p>
 
 <p>
@@ -36,4 +16,4 @@
 </p>
 
 <%= link_to 'Edit', edit_datum_path(@datum) %> |
-<%= link_to 'Back', data_path %>
+<%= link_to 'Back', printer_data_path(:printer_id) %>

@@ -12,30 +12,30 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :condition %><br>
+    <%= f.label :利用状況 %><br>
     <%= f.text_field :condition %>
   </div>
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :プリンタの名前（同機種との区別） %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :print_area_x %><br>
-    <%= f.text_field :print_area_x %>
-  </div>
-  <div class="field">
-    <%= f.label :print_area_y %><br>
-    <%= f.text_field :print_area_y %>
-  </div>
-  <div class="field">
-    <%= f.label :print_area_z %><br>
-    <%= f.text_field :print_area_z %>
-  </div>
-  <div class="field">
-    <%= f.label :printer_type %><br>
+    <%= f.label :プリンタの機種名 %><br>
     <%= f.text_field :printer_type %>
   </div>
   <div class="field">
+    <%= f.label :出力できるX軸の大きさ（mm） %><br>
+    <%= f.text_field :print_area_x %>
+  </div>
+  <div class="field">
+    <%= f.label :出力できるY軸の大きさ（mm） %><br>
+    <%= f.text_field :print_area_y %>
+  </div>
+  <div class="field">
+    <%= f.label :出力できるZ軸の高さ（mm） %><br>
+    <%= f.text_field :print_area_z %>
+  </div>
+  <!-- <div class="field">
     <%= f.label :slice_h %><br>
     <%= f.text_field :slice_h %>
   </div>
@@ -46,14 +46,18 @@
   <div class="field">
     <%= f.label :slice_l %><br>
     <%= f.text_field :slice_l %>
-  </div>
+  </div> -->
   <div class="field">
-    <%= f.label :photo %><br>
+    <%= f.label :プリンタの写真（利用者が確認できる写真） %><br>
     <%= f.text_field :photo %>
   </div>
   <div class="field">
-    <%= f.label :filament_color %><br>
+    <%= f.label :フィラメントの色 %><br>
     <%= f.text_field :filament_color %>
+  </div>
+  <div class="field">
+    <%= f.label :フィラメントの種類（ABS・PLA） %><br>
+    <%= f.text_field :filament_type %>
   </div>
   <div class="actions">
     <%= f.submit %>

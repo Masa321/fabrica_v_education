@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150216094331) do
+ActiveRecord::Schema.define(version: 20150217113721) do
 
   create_table "cam_data", force: true do |t|
     t.integer  "datum_id"
@@ -30,6 +30,10 @@ ActiveRecord::Schema.define(version: 20150216094331) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.binary   "cad_data"
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
   end
 
   create_table "jobs", force: true do |t|

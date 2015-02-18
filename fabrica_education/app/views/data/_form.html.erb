@@ -16,6 +16,12 @@
     <%= f.text_field :name %>
   </div>
   <p>STLファイルのアップローダーの実装</p>
+
+  <div class="field">
+    <%= f.label :file %><br>
+    <%= f.file_field :file %>
+  </div>
+
   <div class="field">
     <%= f.label :cad_data %><br>
     <%= f.text_field :cad_data %>

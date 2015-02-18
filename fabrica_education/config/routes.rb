@@ -7,12 +7,13 @@ Rails.application.routes.draw do
 
   # resources :cam_data
 
-  resources :printers, shallow: true do
-    resources :data, shallow: true do
-      resources :cam_data
-    end
-    resources :jobs
+  resources :printers
+  
+  resources :data, shallow: true do
+    resources :cam_data
   end
+  resources :jobs
+  
 
   # resources :jobs
 

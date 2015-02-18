@@ -29,7 +29,7 @@
         <td><%= printer.printer_type %></td>
         <td><%= printer.photo %></td>
         <td><%= printer.filament_color %></td>
-        <td><%= link_to 'このプリンタを使用する', printer_data_path(printer) %></td>
+        <td><%= link_to 'このプリンタを使用する', data_path(:printer_id => printer.id) %></td>
         <td><%= link_to 'Show', printer %></td>
         <td><%= link_to 'Edit', edit_printer_path(printer) %></td>
         <td><%= link_to 'Destroy', printer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

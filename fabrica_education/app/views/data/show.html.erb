@@ -15,5 +15,29 @@
   <%= @datum.delete_f %>
 </p>
 
+<h1>スライス実行部分</h1>
+
+<table>
+  <tr>
+    <th>解像度バー |</th>
+    <th>サポートあり・なし |</th>
+    <th>ラフトあり・なし</th>
+  </tr>
+</table>
+
+<h2>変換ボタン</h2>
+
+<h2>プリント予想時間00:00:00</h2>
+
+<table color='red'>
+  <tr>
+    <td>＊注意</td>
+    <td>5時間を超えるデータをプリントすることはできません（５時間の部分は管理者が変更できるといい）</td>
+    <td>ファブスペース終了時間にプリントを停止します</td>
+  </tr>
+</table>
+
+<h2><%= link_to 'スライス終了後にプリント', data_path %> </h2>
+
 <%= link_to 'Edit', edit_datum_path(@datum) %> |
-<%= link_to 'Back', printer_data_path(:printer_id) %>
+<%= link_to 'Back', data_path %>

@@ -5,6 +5,7 @@ class DataController < ApplicationController
   # GET /data.json
   def index
     @data = Datum.all
+    @printer = Printer.find(params[:printer_id])
   end
 
   # GET /data/1
@@ -15,7 +16,7 @@ class DataController < ApplicationController
   # GET /data/new
   def new
     @datum = Datum.new
-    @printer = Printer.find(params[:printer_id])
+    #@printer = Printer.find(params[:printer_id])
   end
 
   # GET /data/1/edit

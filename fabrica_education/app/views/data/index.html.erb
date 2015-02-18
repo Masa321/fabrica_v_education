@@ -1,6 +1,23 @@
 <h1>データの新規アップロードと一覧画面</h1>
 <h2>新規アップロード</h2>
-<%= link_to '新規データをアップロード', new_printer_datum_path %>
+<%= link_to '新規データをアップロード', new_datum_path %>
+
+<h2>使用しているプリンタの情報</h2>
+<table>
+  <thead>
+    <tr>
+      <th>プリンタ名前</th>
+      <th>プリンタ機種</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @printer.name %></td>
+      <td><%= @printer.printer_type %></td>
+    </tr>
+  </tbody>
+</table>
 
 <h2>これまでアップロードした3Dデータ</h2>
 <table>

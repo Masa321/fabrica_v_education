@@ -1,0 +1,30 @@
+/* custom.css */
+/* _settings.css */
+/* _mixin.css */
+.wrapper.contents > div:nth-of-type(1) { background-color: #f8f8f8; }
+
+.btn-c1 { color: black; background-color: #e5e5e5; }
+.btn-c1:hover { color: white; background-color: #1da8df; }
+
+.btn-c2 { color: #242424; border: 2px solid #242424; }
+.btn-c2:hover { color: white; background-color: #242424; }
+
+.btn-c3 { color: #242424; border: 2px solid #242424; }
+.btn-c3:hover { color: white; background-color: #242424; }
+
+.btn-c4 { color: white; background-color: #242424; }
+.btn-c4:hover { color: white; background-color: #404040; }
+
+.btn-c5 { color: #fff; background-color: #ffbbbb; }
+.btn-c5:hover { background-color: #ff5555; }
+
+.trans-cont { -moz-transform: translate(3px, 0) skewX(-7deg) rotate(-7deg); -ms-transform: translate(3px, 0) skewX(-7deg) rotate(-7deg); -webkit-transform: translate(3px, 0) skewX(-7deg) rotate(-7deg); transform: translate(3px, 0) skewX(-7deg) rotate(-7deg); }
+
+.scroll_icon { width: 45px; position: absolute; bottom: 0; left: 0; right: 0; margin: 0 auto 30px; }
+
+.frame-blue { border: 2px solid #1da8df; }
+
+.printer-img-1 { overflow: hidden; }
+.printer-img-1 img { width: 110%; margin-left: -5%; }
+
+/*# sourceMappingURL=custom.css.map */

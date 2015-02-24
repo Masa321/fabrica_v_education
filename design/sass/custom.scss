@@ -1,0 +1,88 @@
+/* custom.css */
+
+@import "settings";
+@import "mixin";
+
+.wrapper {
+	//parts
+	&.contents {
+		& > div:nth-of-type(1) {
+			background-color: lighten($gray, 47.5%);
+		}
+	}
+}
+
+//button
+.btn-c1 {
+	color: $black;
+	background-color: lighten($gray, 40%);
+	&:hover {
+		color: white;
+		background-color: $water-blue;
+	}
+}
+
+.btn-c2 {
+	color: lighten($black, 14%);
+	border: 2px solid lighten($black, 14%);
+	&:hover {
+		color: white;
+		background-color: lighten($black, 14%);
+	}
+}
+
+.btn-c3 {
+	color: lighten($black, 14%);
+	border: 2px solid lighten($black, 14%);
+	&:hover {
+		color: white;
+		background-color: lighten($black, 14%);
+	}
+}
+
+.btn-c4 {
+	color: white;
+	background-color: lighten($black, 14%);
+	&:hover {
+		color: white;
+		background-color: lighten($black, 25%);
+	}
+}
+
+.btn-c5 {
+	color: #fff;
+	background-color: #ffbbbb;
+	&:hover {
+		background-color: #ff5555;
+	}
+}
+
+//tools
+.trans-cont {
+	-moz-transform: translate(3px,0) skewX(-7deg) rotate(-7deg);
+	-ms-transform: translate(3px,0) skewX(-7deg) rotate(-7deg);
+	-webkit-transform: translate(3px,0) skewX(-7deg) rotate(-7deg);
+	transform: translate(3px,0) skewX(-7deg) rotate(-7deg);
+}
+
+.scroll_icon {
+	width: 45px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto 30px;
+}
+
+.frame-blue {
+	border: 2px solid $water-blue;
+}
+
+//image
+.printer-img-1 {
+	overflow: hidden;
+	img {
+		width: 110%;
+		margin-left: -5%;
+	}
+}

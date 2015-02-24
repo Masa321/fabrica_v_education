@@ -1,0 +1,420 @@
+/* common.css */
+
+@import "settings";
+@import "mixin";
+
+.hide { display: none; }
+
+/**
+ * width
+ */
+.w-10per { width: 10%; }
+
+.w-20per { width: 20%; }
+
+.w-30per { width: 30%; }
+
+.w-40per { width: 40%; }
+
+.w-50per { width: 50%; }
+
+.w-60per { width: 60%; }
+
+.w-70per { width: 70%; }
+
+.w-80per { width: 80%; }
+
+.w-90per { width: 90%; }
+
+.w-100per { width: 100%; }
+
+/**
+ * max width
+ */
+.mw-100px { max-width: 100px; min-width: 10px; }
+
+.mw-200px { max-width: 200px; min-width: 10px; }
+
+.mw-300px { max-width: 300px; min-width: 10px; }
+
+.mw-400px { max-width: 400px; min-width: 10px; }
+
+.mw-500px { max-width: 500px; min-width: 10px; }
+
+.mw-600px { max-width: 600px; min-width: 10px; }
+
+.mw-700px { max-width: 700px; min-width: 10px; }
+
+.mw-800px { max-width: 800px; min-width: 10px; }
+
+.mw-900px { max-width: 900px; min-width: 10px; }
+
+.mw-1000px { max-width: 1000px; min-width: 10px; }
+
+.mw-1100px { max-width: 1100px; min-width: 10px; }
+
+.mw-1200px { max-width: 1200px; min-width: 10px; }
+
+.mw-1300px { max-width: 1300px; min-width: 10px; }
+
+.mw-1400px { max-width: 1400px; min-width: 10px; }
+
+.mw-1500px { max-width: 1500px; min-width: 10px; }
+
+/**
+ * height
+ */
+@for $i from 1 through 200 {
+	.h-#{5 * $i}px { height: 5px * $i; }
+}
+
+/**
+ * padding
+ */
+.pt-10 { padding-top: 10px; }
+
+.pt-15 { padding-top: 15px; }
+
+.pt-20 { padding-top: 20px; }
+
+.pt-25 { padding-top: 25px; }
+
+.pt-30 { padding-top: 30px; }
+
+.pt-35 { padding-top: 35px; }
+
+.pt-40 { padding-top: 40px; }
+
+.pt-45 { padding-top: 45px; }
+
+.pt-50 { padding-top: 50px; }
+
+.pt-55 { padding-top: 55px; }
+
+.pb-10 { padding-bottom: 10px; }
+
+.pb-15 { padding-bottom: 15px; }
+
+.pb-20 { padding-bottom: 20px; }
+
+.pb-25 { padding-bottom: 25px; }
+
+.pb-30 { padding-bottom: 30px; }
+
+.pb-35 { padding-bottom: 35px; }
+
+.pb-40 { padding-bottom: 40px; }
+
+.pb-45 { padding-bottom: 45px; }
+
+.pb-50 { padding-bottom: 50px; }
+
+.pb-55 { padding-bottom: 55px; }
+
+.pl-10 { padding-left: 10px; }
+
+.pl-15 { padding-left: 15px; }
+
+.pl-20 { padding-left: 20px; }
+
+.pl-25 { padding-left: 25px; }
+
+.pl-30 { padding-left: 30px; }
+
+.pl-35 { padding-left: 35px; }
+
+.pl-40 { padding-left: 40px; }
+
+.pl-45 { padding-left: 45px; }
+
+.pl-50 { padding-left: 50px; }
+
+.pl-55 { padding-left: 55px; }
+
+.pr-10 { padding-right: 10px; }
+
+.pr-15 { padding-right: 15px; }
+
+.pr-20 { padding-right: 20px; }
+
+.pr-25 { padding-right: 25px; }
+
+.pr-30 { padding-right: 30px; }
+
+.pr-35 { padding-right: 35px; }
+
+.pr-40 { padding-right: 40px; }
+
+.pr-45 { padding-right: 45px; }
+
+.pr-50 { padding-right: 50px; }
+
+.pr-55 { padding-right: 55px; }
+
+/**
+ * margin
+ */
+.m-auto { margin: auto; }
+.ml-auto { margin-left: auto; }
+
+.mt-10 { margin-top: 10px; }
+
+.mt-15 { margin-top: 15px; }
+
+.mt-20 { margin-top: 20px; }
+
+.mt-25 { margin-top: 25px; }
+
+.mt-30 { margin-top: 30px; }
+
+.mt-35 { margin-top: 35px; }
+
+.mt-40 { margin-top: 40px; }
+
+.mt-45 { margin-top: 45px; }
+
+.mt-50 { margin-top: 50px; }
+
+.mt-55 { margin-top: 55px; }
+
+.mt-60 { margin-top: 60px; }
+
+.mt-65 { margin-top: 65px; }
+
+.mt-70 { margin-top: 70px; }
+
+.mt-75 { margin-top: 75px; }
+
+.mt-80 { margin-top: 80px; }
+
+.mb-10 { margin-bottom: 10px; }
+
+.mb-15 { margin-bottom: 15px; }
+
+.mb-20 { margin-bottom: 20px; }
+
+.mb-25 { margin-bottom: 25px; }
+
+.mb-30 { margin-bottom: 30px; }
+
+.mb-35 { margin-bottom: 35px; }
+
+.mb-40 { margin-bottom: 40px; }
+
+.mb-45 { margin-bottom: 45px; }
+
+.mb-50 { margin-bottom: 50px; }
+
+.mb-55 { margin-bottom: 55px; }
+
+.ml-10 { margin-left: 10px; }
+
+.ml-15 { margin-left: 15px; }
+
+.ml-20 { margin-left: 20px; }
+
+.ml-25 { margin-left: 25px; }
+
+.ml-30 { margin-left: 30px; }
+
+.ml-35 { margin-left: 35px; }
+
+.ml-40 { margin-left: 40px; }
+
+.ml-45 { margin-left: 45px; }
+
+.ml-50 { margin-left: 50px; }
+
+.ml-55 { margin-left: 55px; }
+
+.mr-10 { margin-right: 10px; }
+
+.mr-15 { margin-right: 15px; }
+
+.mr-20 { margin-right: 20px; }
+
+.mr-25 { margin-right: 25px; }
+
+.mr-30 { margin-right: 30px; }
+
+.mr-35 { margin-right: 35px; }
+
+.mr-40 { margin-right: 40px; }
+
+.mr-45 { margin-right: 45px; }
+
+.mr-50 { margin-right: 50px; }
+
+.mr-55 { margin-right: 55px; }
+
+/**
+ * position
+ */
+.pos-absolute {
+	position: absolute;
+}
+
+.pos-absolute.lzbz {
+	left: 0;
+	bottom: 0;
+}
+
+/**
+ * color
+ */
+.back-white {
+	background-color: rgb(255, 255, 255);
+}
+
+.back-gray {
+	background-color: rgb(248, 248, 248);
+}
+
+/**
+ * button
+ */
+@for $i from 1 through 10 {
+	.btn-#{$i * 10} {
+		width: 100%;
+		height: 10px * $i;
+		line-height: 10px * $i;
+		text-align: center;
+		cursor: pointer;
+	}
+}
+
+/* use btn-w and btn-h */
+@for $i from 1 through 20 {
+	.btn-w-#{$i * 10} {
+		width: 10px * $i;
+		text-align: center;
+		cursor: pointer;
+	}
+}
+
+@for $i from 1 through 10 {
+	.btn-h-#{$i * 10} {
+		height: 10px * $i;
+		line-height: 10px * $i;
+	}
+}
+
+/**
+ * float
+ */
+.f-left {
+	float: left;
+}
+
+/**
+ * separator
+ */
+.separator {
+	width: 100%;
+	border-top: 1px solid darken($white, 8%);
+}
+
+.separator-bold-1 {
+	width: 100%;
+	border-top: 5px solid #333;
+}
+
+.separator-bold-2 {
+	width: 100%;
+	border-top: 7px solid #333;
+}
+
+/**
+ * overflow
+ */
+.of-hid {
+	overflow: hidden;
+}
+
+/**
+ * alert
+ */
+.alert {
+	padding: 15px 20px;
+	line-height: 30px;
+	font-size: 14px;
+	&.info {
+		border: 1px solid #9ecdfc;
+		color: #297ad3;
+	}
+	&.success {
+		border: 1px solid #a9e2c2;
+		color: #36a367;
+	}
+	&.notice {
+		border: 1px solid #f9ce75;
+		color: #e9a00a;
+		&.fill {
+			color: #333;
+			background-color: #f9ce75;
+		}
+	}
+	&.error {
+		border: 1px solid #ffbbbb;
+		color: #e33131;
+		&.fill {
+			color: #fff;
+			background-color: #ffbbbb;
+		}
+	}
+	&.normal {
+		border: 1px solid #777;
+		color: #333;
+	}
+	.segment {
+		margin: 20px 20px 40px;
+	}
+}
+
+.alert-full {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	background-color: rgba(80, 80, 80, 0.8);
+	opacity: 0;
+	display: none;
+	.alert_window {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: white;
+		display: inline-block;
+		.inner-alert_window {
+			padding: 40px;
+			.title {
+				color: #36a367;
+				font-size: 20px;
+				margin: 0 0 40px;
+				text-align: center;
+			}
+			.text {
+				font-size: 15px;
+				line-height: 30px;
+			}
+		}
+	}
+}
+
+/**
+ * progress
+ */
+.progress {
+	width: 100%;
+	height: 20px;
+	background-color: lighten($gray, 40%);
+	.progress-current {
+		width: 0%;
+		height: 20px;
+		background-color: lighten($black, 30%);
+	}
+}

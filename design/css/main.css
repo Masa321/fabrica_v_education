@@ -1,0 +1,185 @@
+@charset "UTF-8";
+/* main.css */
+/* _settings.css */
+/* _mixin.css */
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url(http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+/** common */
+* { font-family: 'Open Sans', 'Noto Sans Japanese', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo,'メイリオ', sans-serif; }
+
+html { width: 100%; height: 100%; padding: 0; margin: 0; }
+
+body { width: 100%; height: 100%; padding: 0; margin: 0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+img { width: 100%; display: block; }
+
+a { text-decoration: none; color: #111111; }
+a:hover { color: #33f; }
+
+.blue-main { color: #33f; }
+
+.blue-dd { color: #1b2e4c; }
+
+.blue-d { color: #28386c; }
+
+.blue { color: #3b7fe0; }
+
+.blue-l { color: #468bec; }
+
+.blue-ll { color: #b8d5ff; }
+
+.water-blue { color: #1da8df; }
+
+.gray-l { color: #878787; }
+
+::-moz-selection { color: white; background: black; }
+
+::selection { color: white; background: black; }
+
+.wrapper-all { width: 100%; height: 100%; padding: 0; margin: 0; position: relative; }
+
+.wrapper.header { width: 100%; position: fixed; z-index: 2; top: 0; }
+.wrapper.article { width: 100%; height: 100%; margin: 75px 0 0; position: relative; }
+.wrapper.contents { position: relative; margin: 0; padding: 0; }
+.wrapper.footer { position: relative; padding: 20px 0; }
+.wrapper .content { position: relative; margin: 0 auto 50px; }
+.wrapper .content .inner-right { margin-left: auto; }
+.wrapper .content .inner-left { position: absolute; top: 0; left: 0; margin: 0 0 25px; }
+.wrapper .footer { color: #191919; font-size: 12px; text-align: center; }
+.wrapper .col-1 { padding: 50px; margin: 0; }
+.wrapper .col-2 { padding: 50px; margin: 0; }
+.wrapper .col-2 .col-item { width: 50%; display: inline-block; vertical-align: top; }
+.wrapper .col-2 .col-item .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-2 .col-item .inner-col-item .pad { padding: 20px; }
+.wrapper .col-2 .col-item .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-2 .col-item .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-2 .col-item-10 { width: 10%; display: inline-block; vertical-align: top; }
+.wrapper .col-2 .col-item-10 .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-2 .col-item-10 .inner-col-item .pad { padding: 20px; }
+.wrapper .col-2 .col-item-10 .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-2 .col-item-10 .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-2 .col-item-20 { width: 20%; display: inline-block; vertical-align: top; }
+.wrapper .col-2 .col-item-20 .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-2 .col-item-20 .inner-col-item .pad { padding: 20px; }
+.wrapper .col-2 .col-item-20 .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-2 .col-item-20 .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-2 .col-item-30 { width: 30%; display: inline-block; vertical-align: top; }
+.wrapper .col-2 .col-item-30 .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-2 .col-item-30 .inner-col-item .pad { padding: 20px; }
+.wrapper .col-2 .col-item-30 .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-2 .col-item-30 .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-2 .col-item-40 { width: 40%; display: inline-block; vertical-align: top; }
+.wrapper .col-2 .col-item-40 .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-2 .col-item-40 .inner-col-item .pad { padding: 20px; }
+.wrapper .col-2 .col-item-40 .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-2 .col-item-40 .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-2 .col-item-50 { width: 50%; display: inline-block; vertical-align: top; }
+.wrapper .col-2 .col-item-50 .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-2 .col-item-50 .inner-col-item .pad { padding: 20px; }
+.wrapper .col-2 .col-item-50 .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-2 .col-item-50 .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-2 .col-item-60 { width: 60%; display: inline-block; vertical-align: top; }
+.wrapper .col-2 .col-item-60 .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-2 .col-item-60 .inner-col-item .pad { padding: 20px; }
+.wrapper .col-2 .col-item-60 .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-2 .col-item-60 .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-2 .col-item-70 { width: 70%; display: inline-block; vertical-align: top; }
+.wrapper .col-2 .col-item-70 .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-2 .col-item-70 .inner-col-item .pad { padding: 20px; }
+.wrapper .col-2 .col-item-70 .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-2 .col-item-70 .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-2 .col-item-80 { width: 80%; display: inline-block; vertical-align: top; }
+.wrapper .col-2 .col-item-80 .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-2 .col-item-80 .inner-col-item .pad { padding: 20px; }
+.wrapper .col-2 .col-item-80 .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-2 .col-item-80 .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-2 .col-item-90 { width: 90%; display: inline-block; vertical-align: top; }
+.wrapper .col-2 .col-item-90 .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-2 .col-item-90 .inner-col-item .pad { padding: 20px; }
+.wrapper .col-2 .col-item-90 .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-2 .col-item-90 .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-2 .col-item-100 { width: 100%; display: inline-block; vertical-align: top; }
+.wrapper .col-2 .col-item-100 .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-2 .col-item-100 .inner-col-item .pad { padding: 20px; }
+.wrapper .col-2 .col-item-100 .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-2 .col-item-100 .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-3 { padding: 50px; margin: 0; }
+.wrapper .col-3 .col-item { width: 33.33%; display: inline-block; vertical-align: top; }
+.wrapper .col-3 .col-item .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-3 .col-item .inner-col-item .pad { padding: 20px; }
+.wrapper .col-3 .col-item .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-3 .col-item .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-3 .col-item-10 { width: 10%; display: inline-block; vertical-align: top; }
+.wrapper .col-3 .col-item-10 .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-3 .col-item-10 .inner-col-item .pad { padding: 20px; }
+.wrapper .col-3 .col-item-10 .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-3 .col-item-10 .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-3 .col-item-20 { width: 20%; display: inline-block; vertical-align: top; }
+.wrapper .col-3 .col-item-20 .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-3 .col-item-20 .inner-col-item .pad { padding: 20px; }
+.wrapper .col-3 .col-item-20 .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-3 .col-item-20 .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-3 .col-item-30 { width: 30%; display: inline-block; vertical-align: top; }
+.wrapper .col-3 .col-item-30 .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-3 .col-item-30 .inner-col-item .pad { padding: 20px; }
+.wrapper .col-3 .col-item-30 .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-3 .col-item-30 .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-3 .col-item-40 { width: 40%; display: inline-block; vertical-align: top; }
+.wrapper .col-3 .col-item-40 .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-3 .col-item-40 .inner-col-item .pad { padding: 20px; }
+.wrapper .col-3 .col-item-40 .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-3 .col-item-40 .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-3 .col-item-50 { width: 50%; display: inline-block; vertical-align: top; }
+.wrapper .col-3 .col-item-50 .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-3 .col-item-50 .inner-col-item .pad { padding: 20px; }
+.wrapper .col-3 .col-item-50 .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-3 .col-item-50 .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-3 .col-item-60 { width: 60%; display: inline-block; vertical-align: top; }
+.wrapper .col-3 .col-item-60 .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-3 .col-item-60 .inner-col-item .pad { padding: 20px; }
+.wrapper .col-3 .col-item-60 .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-3 .col-item-60 .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-3 .col-item-70 { width: 70%; display: inline-block; vertical-align: top; }
+.wrapper .col-3 .col-item-70 .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-3 .col-item-70 .inner-col-item .pad { padding: 20px; }
+.wrapper .col-3 .col-item-70 .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-3 .col-item-70 .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-3 .col-item-80 { width: 80%; display: inline-block; vertical-align: top; }
+.wrapper .col-3 .col-item-80 .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-3 .col-item-80 .inner-col-item .pad { padding: 20px; }
+.wrapper .col-3 .col-item-80 .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-3 .col-item-80 .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-3 .col-item-90 { width: 90%; display: inline-block; vertical-align: top; }
+.wrapper .col-3 .col-item-90 .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-3 .col-item-90 .inner-col-item .pad { padding: 20px; }
+.wrapper .col-3 .col-item-90 .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-3 .col-item-90 .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-3 .col-item-100 { width: 100%; display: inline-block; vertical-align: top; }
+.wrapper .col-3 .col-item-100 .inner-col-item { margin: 0; position: relative; }
+.wrapper .col-3 .col-item-100 .inner-col-item .pad { padding: 20px; }
+.wrapper .col-3 .col-item-100 .inner-col-item-margin { margin: 15px; position: relative; }
+.wrapper .col-3 .col-item-100 .inner-col-item-margin .pad { padding: 20px; }
+.wrapper .col-max { margin: 0; }
+.wrapper #global_link { font-size: 15px; font-weight: 400; letter-spacing: 1px; }
+.wrapper .global_link { z-index: 3; text-align: right; padding: 0 50px 0 0; position: fixed; right: 0; }
+.wrapper .global_link .link-item { padding: 0 15px; opacity: 1.0; display: inline-block; }
+.wrapper .global_link .link-item-separator { padding: 0 2px; opacity: 1.0; display: inline-block; }
+.wrapper .global_link_compact { width: 100%; z-index: 3; padding: 50px 0 0; position: fixed; top: 0; right: 0; }
+.wrapper .global_link_compact .link-item { height: 0; font-size: 25px; font-weight: 200; padding: 0 30px; display: block; overflow: hidden; opacity: 0.0; border-bottom: 0px solid #e5e5e5; }
+.wrapper .global_link_compact .link-item-separator { display: none; }
+.wrapper #menubar { width: 40px; padding: 0 15px; margin-top: -25px; cursor: pointer; }
+.wrapper .hover_link { cursor: pointer; }
+.wrapper .hover_link:hover { color: #33f; }
+.wrapper .page_title { font-size: 28px; }
+.wrapper .title { font-size: 25px; font-weight: 400; padding: 0; margin: 30px 0; letter-spacing: 5px; color: #111111; font-family: 'Dosis', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo,'メイリオ', sans-serif; }
+.wrapper .title-small { font-size: 16px; font-weight: 300; letter-spacing: 4px; color: #111111; font-family: 'Dosis', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo,'メイリオ', sans-serif; }
+.wrapper .title-small .bold { font-weight: 400; font-family: 'Dosis', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo,'メイリオ', sans-serif; }
+.wrapper .subtitle { width: 100%; font-size: 18px; font-weight: 400; letter-spacing: 3px; color: #111111; }
+.wrapper .subtitle-small { width: 100%; font-size: 11px; font-weight: 300; letter-spacing: 2px; color: #111111; }
+.wrapper .text { font-size: 16px; font-weight: 200; line-height: 32px; color: #111111; }
+.wrapper .text-small { font-size: 13px; font-weight: 200; line-height: 32px; color: #111111; }
+.wrapper .t_center { text-align: center; }
+.wrapper .t_right { text-align: right; }
+
+/*# sourceMappingURL=main.css.map */

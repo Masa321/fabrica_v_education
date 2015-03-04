@@ -1,0 +1,51 @@
+/* _global-link.css */
+
+#global_link {
+	font-size: 15px;
+	font-weight: 400;
+	letter-spacing: 1px;
+}
+.global_link {
+	z-index: 3;
+	text-align: right;
+	padding: 0 50px 0 0;
+	position: fixed;
+	right: 0;
+	.link-item {
+		padding: 0 15px;
+		opacity: 1.0;
+		display: inline-block;
+	}
+	.link-item-separator {
+		padding: 0 2px;
+		opacity: 1.0;
+		display: inline-block;
+	}
+}
+.global_link_compact {
+	width: 100%;
+	z-index: 3;
+	padding: 50px 0 0;
+	position: fixed;
+	top: 0;
+	right:0;
+	.link-item {
+		height: 0;
+		font-size: 25px;
+		font-weight: 200;
+		padding: 0 30px;
+		display: block;
+		overflow: hidden;
+		opacity: 0.0;
+		border-bottom: 0px solid lighten($gray, 40%);
+	}
+	.link-item-separator {
+		display: none;
+	}
+}
+#menubar {
+	width: 40px;
+	padding: 0 15px;
+	margin-top: -25px;
+	cursor: pointer;
+}

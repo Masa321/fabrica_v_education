@@ -1,0 +1,35 @@
+/* _col.css */
+
+.col-1 {
+	padding: 50px;
+	margin: 0;
+}
+.col-2 {
+	padding: 50px;
+	margin: 0;
+	.col-item {
+		width: 50%;
+		display: inline-block;
+		vertical-align: top;
+		@include inner-col-item();
+	}
+	
+	@include col-item-percent();
+}
+.col-3 {
+	padding: 50px;
+	margin: 0;
+	.col-item {
+		width: 33.33%;
+		display: inline-block;
+		vertical-align: top;
+		@include inner-col-item();
+	}
+
+	@include col-item-percent();
+}
+.col-max {
+	margin: 0;
+
+	@include col-item-percent();
+}

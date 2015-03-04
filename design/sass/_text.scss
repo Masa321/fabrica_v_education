@@ -1,0 +1,20 @@
+/* _text.css */
+
+.text {
+	font-size: 16px;
+	font-weight: 200;
+	line-height: 32px;
+	color: lighten($black, 6.5%);
+}
+.text-small {
+	font-size: 13px;
+	font-weight: 200;
+	line-height: 32px;
+	color: lighten($black, 6.5%);
+}
+.t_center {
+	text-align: center;
+}
+.t_right {
+	text-align: right;
+}

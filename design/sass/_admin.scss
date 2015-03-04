@@ -1,0 +1,16 @@
+/* _admin.css */
+
+.header-admin {
+	color: $white;
+	background-color: lighten($black, 14%);
+}
+
+.sidebar-admin {
+	position: fixed;
+	left: 0;
+}
+
+.content-admin {
+	position: absolute;
+	right: 0;
+}

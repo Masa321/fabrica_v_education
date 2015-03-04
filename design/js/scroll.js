@@ -27,6 +27,11 @@ $(document).ready(function() {
 						backgroundColor: 'rgba(255,255,255,0.9)'
 					}, 200);
 
+					$('.shrink_header_admin').animate({
+						paddingTop: '15px',
+						paddingBottom: '40px'
+					}, 200);
+
 					shrink_header_ok = false;
 				}
 			} else {
@@ -35,6 +40,11 @@ $(document).ready(function() {
 						paddingTop: '25px',
 						paddingBottom: '50px',
 						backgroundColor: 'rgba(255,255,255,0.0)'
+					}, 200);
+
+					$('.shrink_header_admin').animate({
+						paddingTop: '25px',
+						paddingBottom: '50px'
 					}, 200);
 
 					shrink_header_ok = true;

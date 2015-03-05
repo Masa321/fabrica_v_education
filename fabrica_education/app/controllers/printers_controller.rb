@@ -5,6 +5,7 @@ class PrintersController < ApplicationController
   # GET /printers.json
   def index
     @printers = Printer.all
+    @title = "3Dプリンターを選ぶ"
   end
 
   # GET /printers/1

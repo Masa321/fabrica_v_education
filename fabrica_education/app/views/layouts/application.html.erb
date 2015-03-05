@@ -1,33 +1,74 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>FabricaEducation</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
 
-<header>
-  <nav>
-    <!-- user_signed_in? はユーザがログインしているか調べるdeviseのHelperメソッド -->
-    <% if user_signed_in? %> 
-      <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
-      <!-- *_path はUserモデルを作成したときに、
-        deviseにより自動で作成されてますので、rake routesで確認できます -->
-      Logged in as <strong><%= current_user.email %></strong>.
-      <%= link_to 'プロフィール変更', edit_user_registration_path %> |
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "サインイン", new_user_registration_path %> |
-      <%= link_to "ログイン", new_user_session_path %>
-    <% end %>
-  </nav>
-</header>
+        <title>Fabrica Education</title>
+        <%= favicon_link_tag 'favicon.png', rel: 'shortcut icon' %>
+        <%= favicon_link_tag 'favicon.png', rel: 'apple-touch-icon' %>
+    </head>
+    <body>
+        <div class="wrapper-all">
+            <!-- header -->
+            <div class="wrapper header">
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<%= yield %>
+                <div>
+                    <% if user_signed_in? %> 
+                      <!-- current_user は現在ログインしているUserオブジェクトを返すdeviseのHelperメソッド -->
+                      <!-- *_path はUserモデルを作成したときに、
+                        deviseにより自動で作成されてますので、rake routesで確認できます -->
+                      Logged in as <strong><%= current_user.email %></strong>.
+                      <%= link_to 'プロフィール変更', edit_user_registration_path %> |
+                      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                    <% else %>
+                      <%= link_to "サインイン", new_user_registration_path %> |
+                      <%= link_to "ログイン", new_user_session_path %>
+                    <% end %>
+                </div>
+              
+                <div class="col-1 shrink_header">
+                    <div class="page_title"></div>
+                    <div id="global_link" class="global_link">
+                        <div id="menubar" class="ml-auto">
+                            <svg version="1.1" id="menubar-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"y="0px" viewBox="0 0 200 149.667" enable-background="new 0 0 200 149.667" xml:space="preserve">
+                                <line fill="none" stroke="#333" stroke-width="18" stroke-miterlimit="10" x1="15" y1="16" x2="185" y2="16"/>
+                                <line fill="none" stroke="#333" stroke-width="18" stroke-miterlimit="10" x1="15" y1="75" x2="185" y2="75"/>
+                                <line fill="none" stroke="#333" stroke-width="18" stroke-miterlimit="10" x1="15" y1="133" x2="185" y2="133"/>
+                            </svg>
+                        </div>
+                        <% for step in 0..4 %>
+                            <% unless step == 0 %>
+                              <div class="link-item-separator">/</div>
+                            <% end %>
+                            <div class="link-item"><div id="scroll_<%= step %>"<% if step == @current_step %> class="water-blue"<% end %>>STEP.<%= step %></div></div>
+                        <% end %>
+                    </div>
+                </div>
 
-</body>
+            </div>
+
+            <!-- article -->
+            <div class="wrapper article">
+
+                <!-- contents -->
+                <div class="wrapper contents">
+
+                    <%= render partial: "shared/header", locals: {title: @title} %>
+
+                    <p class="notice"><%= notice %></p>
+                    <p class="alert"><%= alert %></p>
+
+                    <div class="pt-25"></div>
+
+                    <%= yield %>
+                </div>
+            </div>
+            <!-- end article -->
+        </div>
+        <!-- end wrapper-all -->
+    </body>
 </html>

@@ -1,43 +1,36 @@
-<h1>3Dプリンタを選ぶ</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Condition</th>
-      <th>Name</th>
-      <th>Print area x</th>
-      <th>Print area y</th>
-      <th>Print area z</th>
-      <th>Printer type</th>
-      <!-- <th>Slice h</th>
-      <th>Slice m</th>
-      <th>Slice l</th> -->
-      <th>Photo</th>
-      <th>Filament color</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @printers.each do |printer| %>
-      <tr>
-        <td><%= printer.condition %></td>
-        <td><%= printer.name %></td>
-        <td><%= printer.print_area_x %></td>
-        <td><%= printer.print_area_y %></td>
-        <td><%= printer.print_area_z %></td>
-        <td><%= printer.printer_type %></td>
-        <td><%= printer.photo %></td>
-        <td><%= printer.filament_color %></td>
-        <td><%= link_to 'このプリンタを使用する', data_path(:printer_id => printer.id) %></td>
-        <td><%= link_to 'Show', printer %></td>
-        <td><%= link_to 'Edit', edit_printer_path(printer) %></td>
-        <td><%= link_to 'Destroy', printer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+                  <% if @printers.length > 0 %>
+                    <div class="col-3 col-scroll">
+                        <div class="inner-col">
+                            <div class="mw-1000px m-auto">
+                                <% @printers.each.with_index(1) do |printer,count| %>
+                                  <% unless count == 1 %>=--><% end %>
+                                  <div class="col-item">
+                                   <div class="inner-col-item-margin back-gray">
+                                       <div class="pad">
+                                           <!-- title -->
+                                           <div class="subtitle h-75px">
+                                             <strong><%= printer.name %></strong><br>No.<%= count %>
+                                           </div>
+                                           <!-- image -->
+                                           <div class="mb-25 printer-img-1"><%= printer.photo %></div>
+                                           <!-- info -->
+                                           <div class="text h-140px">
+                                               <div><%= printer.filament_type %></div>
+                                               <div><%= printer.filament_color %></div>
+                                               <div><%= printer.print_area_x.to_s + " x " + printer.print_area_y.to_s + " x " + printer.print_area_z.to_s %></div>
+                                               <div><%= printer.printer_type %></div>
+                                           </div>
+                                       <%= link_to data_path(:printer_id => printer.id) do %>
+                                          <div class="btn-c1 btn-70">選択する</div>
+                                       <% end %>
+                                       </div>
+                                       <!-- button -->
+                                     </div><!-- div.inner-col-item-margin -->
+                                 </div><% unless count == @printers.length %><!--<% end %>
+                               <% end %>
+                             </div><!-- div.mw-1000px -->
+                        </div><!-- div.inner-col -->
+                    </div><!-- div.col-3 -->
+                  <% end %>
 
 <%= link_to 'New Printer', new_printer_path %>

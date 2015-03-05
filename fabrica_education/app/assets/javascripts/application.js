@@ -13,4 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require main
+//= require responsive
+//= require scroll
+//= require snap.svg-min
+//= require sub-svg
 //= require_tree .

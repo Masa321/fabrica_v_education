@@ -114,154 +114,18 @@ a {
 		text-align: center;
 	}
 
-	//column
-	.col-1 {
-		padding: 50px;
-		margin: 0;
-	}
-	.col-2 {
-		padding: 50px;
-		margin: 0;
-		.col-item {
-			width: 50%;
-			display: inline-block;
-			vertical-align: top;
-			@include inner-col-item();
-		}
-		
-		@include col-item-percent();
-	}
-	.col-3 {
-		padding: 50px;
-		margin: 0;
-		.col-item {
-			width: 33.33%;
-			display: inline-block;
-			vertical-align: top;
-			@include inner-col-item();
-		}
+	//action
+	@import "action";
 
-		@include col-item-percent();
-	}
-	.col-max {
-		margin: 0;
-	}
+	//column
+	@import "col";
 
 	//global link
-	#global_link {
-		font-size: 15px;
-		font-weight: 400;
-		letter-spacing: 1px;
-	}
-	.global_link {
-		z-index: 3;
-		text-align: right;
-		padding: 0 50px 0 0;
-		position: fixed;
-		right: 0;
-		.link-item {
-			padding: 0 15px;
-			opacity: 1.0;
-			display: inline-block;
-		}
-		.link-item-separator {
-			padding: 0 2px;
-			opacity: 1.0;
-			display: inline-block;
-		}
-	}
-	.global_link_compact {
-		width: 100%;
-		z-index: 3;
-		padding: 50px 0 0;
-		position: fixed;
-		top: 0;
-		right:0;
-		.link-item {
-			height: 0;
-			font-size: 25px;
-			font-weight: 200;
-			padding: 0 30px;
-			display: block;
-			overflow: hidden;
-			opacity: 0.0;
-			border-bottom: 0px solid lighten($gray, 40%);
-		}
-		.link-item-separator {
-			display: none;
-		}
-	}
-	#menubar {
-		width: 40px;
-		padding: 0 15px;
-		margin-top: -25px;
-		cursor: pointer;
-	}
-
-	//action
-	.hover_link {
-		cursor: pointer;
-		&:hover {
-			color: $blue-main;
-		}
-	}
+	@import "global-link";
 
 	//title
-	.page_title {
-		font-size: 28px;
-	}
-	.title {
-		font-size: 25px;
-		font-weight: 400;
-		padding: 0;
-		margin: 30px 0;
-		letter-spacing: 5px;
-		color: lighten($black, 6.5%);
-		@include font-dosis();
-	}
-	.title-small {
-		font-size: 16px;
-		font-weight: 300;
-		letter-spacing: 4px;
-		color: lighten($black, 6.5%);
-		@include font-dosis();
-		.bold {
-			font-weight: 400;
-			@include font-dosis();
-		}
-	}
-	.subtitle {
-		width: 100%;
-		font-size: 18px;
-		font-weight: 400;
-		letter-spacing: 3px;
-		color: lighten($black, 6.5%);
-	}
-	.subtitle-small {
-		width: 100%;
-		font-size: 11px;
-		font-weight: 300;
-		letter-spacing: 2px;
-		color: lighten($black, 6.5%);
-	}
+	@import "title";
 
 	//text
-	.text {
-		font-size: 16px;
-		font-weight: 200;
-		line-height: 32px;
-		color: lighten($black, 6.5%);
-	}
-	.text-small {
-		font-size: 13px;
-		font-weight: 200;
-		line-height: 32px;
-		color: lighten($black, 6.5%);
-	}
-	.t_center {
-		text-align: center;
-	}
-	.t_right {
-		text-align: right;
-	}
+	@import "text";
 }

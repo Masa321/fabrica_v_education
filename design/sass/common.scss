@@ -59,7 +59,7 @@
 
 .mw-1400px { max-width: 1400px; min-width: 10px; }
 
-.mw-1500px { max-width: 1500px; min-width: 10px; }
+.mw-1500px { max-width: 1500px; min-width: 10px; } 
 
 /**
  * height
@@ -296,6 +296,13 @@
 	.btn-h-#{$i * 10} {
 		height: 10px * $i;
 		line-height: 10px * $i;
+	}
+}
+
+/* checkbox */
+.checkbox {
+	&:checked {
+		background-color: rgb(0, 0, 0);
 	}
 }
 

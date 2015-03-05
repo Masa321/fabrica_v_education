@@ -69,6 +69,7 @@ $(document).ready(function() {
 			$('.global_link .link-item').css({'opacity':1.0, 'padding-top':'0px', 'padding-bottom':'0px'});
 			$('#menubar').addClass('hide');
 			$('.shrink_header').css({'padding-top':'25px'});
+			$('.shrink_header_admin').css({'padding-top':'25px'});
 		}
 
 		if (win_width < 650) {

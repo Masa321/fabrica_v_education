@@ -13,12 +13,11 @@ Rails.application.routes.draw do
     resources :cam_data
   end
   resources :jobs
+
+  namespace :admin do
+    resources :printers, :data, :jobs
+  end
   
-
-  # resources :jobs
-
-  # resources :data
-
   #for devise
   root to: "home#index"
 

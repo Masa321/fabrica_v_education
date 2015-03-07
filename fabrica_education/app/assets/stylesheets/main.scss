@@ -1,0 +1,267 @@
+/* main.css */
+
+@import "settings";
+@import "mixin";
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url(http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+
+/**
+ * common
+ **/
+* {
+	@include font-noto-sans();
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+a {
+	text-decoration: none;
+	color: lighten($black, 6.5%);
+	&:hover {
+		color: $blue-main;
+	}
+}
+
+//color
+.blue-main { color: $blue-main; }
+.blue-dd { color: rgb(27, 46, 76); }
+.blue-d { color: rgb(40, 56, 108); }
+.blue { color: rgb(59, 127, 224); }
+.blue-l { color: rgb(70, 139, 236); }
+.blue-ll { color: rgb(184, 213, 255); }
+.water-blue { color: $water-blue; }
+.gray-l { color: lighten($gray, 3%); }
+
+// selection
+::-moz-selection {
+    color: white;
+    background: black;
+}
+::selection {
+    color: white; 
+    background: black;
+}
+
+//main style
+.wrapper-all {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+.wrapper {
+	//parts
+	&.header {
+		width: 100%;
+		position: fixed;
+		z-index: 2;
+		top: 0;
+	}
+	&.article {
+		width: 100%;
+		height: 100%;
+		margin: 75px 0 0;
+		position: relative;
+	}
+	&.contents {
+		position: relative;
+		margin: 0;
+		padding: 0;
+	}
+	&.footer {
+		position: relative;
+		padding: 20px 0;
+	}
+
+	.content {
+		position: relative;
+		margin: 0 auto 50px;
+		.inner-right {
+			margin-left: auto;
+		}
+		.inner-left {
+			position: absolute;
+			top: 0;
+			left: 0;
+			margin: 0 0 25px;
+		}
+	}
+	.footer {
+		color: darken($gray, 40%);
+		font-size: 12px;
+		text-align: center;
+	}
+
+	//column
+	.col-1 {
+		padding: 50px;
+		margin: 0;
+	}
+	.col-2 {
+		padding: 50px;
+		margin: 0;
+		.col-item {
+			width: 50%;
+			display: inline-block;
+			vertical-align: top;
+			@include inner-col-item();
+		}
+		
+		@include col-item-percent();
+	}
+	.col-3 {
+		padding: 50px;
+		margin: 0;
+		.col-item {
+			width: 33.33%;
+			display: inline-block;
+			vertical-align: top;
+			@include inner-col-item();
+		}
+
+		@include col-item-percent();
+	}
+	.col-max {
+		margin: 0;
+	}
+
+	//global link
+	#global_link {
+		font-size: 15px;
+		font-weight: 400;
+		letter-spacing: 1px;
+	}
+	.global_link {
+		z-index: 3;
+		text-align: right;
+		padding: 0 50px 0 0;
+		position: fixed;
+		right: 0;
+		.link-item {
+			padding: 0 15px;
+			opacity: 1.0;
+			display: inline-block;
+		}
+		.link-item-separator {
+			padding: 0 2px;
+			opacity: 1.0;
+			display: inline-block;
+		}
+	}
+	.global_link_compact {
+		width: 100%;
+		z-index: 3;
+		padding: 50px 0 0;
+		position: fixed;
+		top: 0;
+		right:0;
+		.link-item {
+			height: 0;
+			font-size: 25px;
+			font-weight: 200;
+			padding: 0 30px;
+			display: block;
+			overflow: hidden;
+			opacity: 0.0;
+			border-bottom: 0px solid lighten($gray, 40%);
+		}
+		.link-item-separator {
+			display: none;
+		}
+	}
+	#menubar {
+		width: 40px;
+		padding: 0 15px;
+		margin-top: -25px;
+		cursor: pointer;
+	}
+
+	//action
+	.hover_link {
+		cursor: pointer;
+		&:hover {
+			color: $blue-main;
+		}
+	}
+
+	//title
+	.page_title {
+		font-size: 28px;
+	}
+	.title {
+		font-size: 25px;
+		font-weight: 400;
+		padding: 0;
+		margin: 30px 0;
+		letter-spacing: 5px;
+		color: lighten($black, 6.5%);
+		@include font-dosis();
+	}
+	.title-small {
+		font-size: 16px;
+		font-weight: 300;
+		letter-spacing: 4px;
+		color: lighten($black, 6.5%);
+		@include font-dosis();
+		.bold {
+			font-weight: 400;
+			@include font-dosis();
+		}
+	}
+	.subtitle {
+		width: 100%;
+		font-size: 18px;
+		font-weight: 400;
+		letter-spacing: 3px;
+		color: lighten($black, 6.5%);
+	}
+	.subtitle-small {
+		width: 100%;
+		font-size: 11px;
+		font-weight: 300;
+		letter-spacing: 2px;
+		color: lighten($black, 6.5%);
+	}
+
+	//text
+	.text {
+		font-size: 16px;
+		font-weight: 200;
+		line-height: 32px;
+		color: lighten($black, 6.5%);
+	}
+	.text-small {
+		font-size: 13px;
+		font-weight: 200;
+		line-height: 32px;
+		color: lighten($black, 6.5%);
+	}
+	.t_center {
+		text-align: center;
+	}
+	.t_right {
+		text-align: right;
+	}
+}

@@ -25,29 +25,31 @@
                       <%= link_to 'プロフィール変更', edit_user_registration_path %> |
                       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
                     <% else %>
-                      <%= link_to "サインイン", new_user_registration_path %> |
+                      <%= link_to "登録", new_user_registration_path %> |
                       <%= link_to "ログイン", new_user_session_path %>
                     <% end %>
                 </div>
               
-                <div class="col-1 shrink_header">
-                    <div class="page_title"></div>
-                    <div id="global_link" class="global_link">
-                        <div id="menubar" class="ml-auto">
-                            <svg version="1.1" id="menubar-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"y="0px" viewBox="0 0 200 149.667" enable-background="new 0 0 200 149.667" xml:space="preserve">
-                                <line fill="none" stroke="#333" stroke-width="18" stroke-miterlimit="10" x1="15" y1="16" x2="185" y2="16"/>
-                                <line fill="none" stroke="#333" stroke-width="18" stroke-miterlimit="10" x1="15" y1="75" x2="185" y2="75"/>
-                                <line fill="none" stroke="#333" stroke-width="18" stroke-miterlimit="10" x1="15" y1="133" x2="185" y2="133"/>
-                            </svg>
-                        </div>
-                        <% for step in 0..4 %>
-                            <% unless step == 0 %>
-                              <div class="link-item-separator">/</div>
-                            <% end %>
-                            <div class="link-item"><div id="scroll_<%= step %>"<% if step == @current_step %> class="water-blue"<% end %>>STEP.<%= step %></div></div>
-                        <% end %>
+                <% if user_signed_in? %> 
+                  <div class="col-1 shrink_header">
+                      <div class="page_title"></div>
+                      <div id="global_link" class="global_link">
+                          <div id="menubar" class="ml-auto">
+                              <svg version="1.1" id="menubar-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"y="0px" viewBox="0 0 200 149.667" enable-background="new 0 0 200 149.667" xml:space="preserve">
+                                  <line fill="none" stroke="#333" stroke-width="18" stroke-miterlimit="10" x1="15" y1="16" x2="185" y2="16"/>
+                                  <line fill="none" stroke="#333" stroke-width="18" stroke-miterlimit="10" x1="15" y1="75" x2="185" y2="75"/>
+                                  <line fill="none" stroke="#333" stroke-width="18" stroke-miterlimit="10" x1="15" y1="133" x2="185" y2="133"/>
+                              </svg>
+                          </div>
+                          <% for step in 0..4 %>
+                              <% unless step == 0 %>
+                                <div class="link-item-separator">/</div>
+                              <% end %>
+                              <div class="link-item"><div id="scroll_<%= step %>"<% if step == @current_step %> class="water-blue"<% end %>>STEP.<%= step %></div></div>
+                          <% end %>
+                      </div>
                     </div>
-                </div>
+                <% end %>
 
             </div>
 
@@ -57,12 +59,14 @@
                 <!-- contents -->
                 <div class="wrapper contents">
 
-                    <%= render partial: "shared/header", locals: {title: @title} %>
+                    <% if @title %>
+                        <%= render partial: "shared/header", locals: {title: @title} %>
+                        <div class="pt-25"></div>
+                    <% end %>
 
                     <p class="notice"><%= notice %></p>
                     <p class="alert"><%= alert %></p>
 
-                    <div class="pt-25"></div>
 
                     <%= yield %>
                 </div>
